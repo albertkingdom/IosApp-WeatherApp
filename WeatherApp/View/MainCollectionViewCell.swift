@@ -28,10 +28,11 @@ class MainCollectionViewCell: UICollectionViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        backgroundColor = .mySkyblueColor
         topView.backgroundColor = .mySkyblueColor
         tableView.backgroundColor = .mySkyblueColor
         collectionView.backgroundColor = .mySkyblueColor
-        
+        scrollView.backgroundColor = .mySkyblueColor
         collectionView.addTopBorder(with: UIColor.white, andWidth: 1)
         collectionView.addBottomBorder(with: UIColor.white, andWidth: 1)
         tableView.addBottomBorder(with: UIColor.white, andWidth: 1)

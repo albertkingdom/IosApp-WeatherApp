@@ -100,7 +100,6 @@ class WeatherApi {
                 
                 group.leave()
             }
-           
         }
         group.notify(queue: .main) {
           

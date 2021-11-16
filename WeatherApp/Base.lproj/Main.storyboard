@@ -300,7 +300,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewLocationCollectionViewCell" id="Au6-AI-w3s" customClass="MainCollectionViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="Au6-AI-w3s" customClass="MainCollectionViewCell" customModule="WeatherApp" customModuleProvider="target">
                                         <rect key="frame" x="46.666666666666664" y="0.0" width="297" height="486"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0fo-Pm-sKF">
@@ -314,7 +314,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="297" height="1500"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3a-Qg-BXn" userLabel="Top View">
-                                                                    <rect key="frame" x="0.0" y="286" width="297" height="250"/>
+                                                                    <rect key="frame" x="0.0" y="1014" width="297" height="250"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzk-Nu-0Rf">
                                                                             <rect key="frame" x="120" y="50" width="57" height="29"/>
@@ -346,7 +346,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="55T-00-IE4">
-                                                                    <rect key="frame" x="0.0" y="536" width="297" height="120"/>
+                                                                    <rect key="frame" x="0.0" y="1264" width="297" height="120"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="120" id="PjY-9L-3IP"/>
@@ -360,14 +360,13 @@
                                                                     <cells/>
                                                                 </collectionView>
                                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kqo-ip-I1n">
-                                                                    <rect key="frame" x="0.0" y="656" width="297" height="400"/>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <rect key="frame" x="0.0" y="1384" width="297" height="400"/>
+                                                                    <color key="backgroundColor" red="0.96078431369999995" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="400" id="a5t-Oa-NHL"/>
                                                                     </constraints>
                                                                 </tableView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="Kqo-ip-I1n" firstAttribute="leading" secondItem="RWN-0c-rXY" secondAttribute="leading" id="L1h-55-xLJ"/>
                                                                 <constraint firstAttribute="trailing" secondItem="p3a-Qg-BXn" secondAttribute="trailing" id="SM9-L9-I8V"/>

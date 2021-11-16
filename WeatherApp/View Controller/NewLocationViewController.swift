@@ -10,7 +10,8 @@ import UIKit
 class NewLocationViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var tableView: UITableView!
+    
     @IBAction func Cancel(_ sender: Any) {
         dismiss(animated: false, completion: nil)
     }
@@ -25,6 +26,11 @@ class NewLocationViewController: UIViewController {
         collectionView.dataSource = self
         
         getWeather()
+    }
+    override func viewDidLayoutSubviews() {
+        view.backgroundColor = .mySkyblueColor
+        collectionView.backgroundColor = .mySkyblueColor
+        
     }
     func createLayout() -> UICollectionViewCompositionalLayout {
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
@@ -94,7 +100,7 @@ extension NewLocationViewController: UICollectionViewDataSource {
         return weatherAndCityNameCombineList.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewLocationCollectionViewCell", for: indexPath) as! MainCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         let weather = weatherAndCityNameCombineList[indexPath.row]
         cell.setupData(with: weather)
         

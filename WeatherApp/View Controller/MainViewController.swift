@@ -30,7 +30,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     //var currentLocation: CLLocation?
     var currentLocation: Coordinate?
-    var allCoordinate: Set<Coordinate> = [Coordinate(lat: 24.2198468, lon: 120.67568)] {
+    var allCoordinate: Set<Coordinate> = [
+    ] {
         
         didSet {
             
@@ -93,10 +94,11 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         pageControl.setIndicatorImage(UIImage(systemName: "location.fill"), forPage: 0)
         
     }
-    override func viewWillLayoutSubviews() {
+    override func viewDidLayoutSubviews() {
         super.viewWillLayoutSubviews()
         view.backgroundColor = .mySkyblueColor
         functionBarView.backgroundColor = .mySkyblueColor
+        tableView.backgroundColor = .mySkyblueColor
         if layoutType == 1 {
          // let the height of tableview adjust with table view content
             tableViewHeight.constant = tableView.contentSize.height
@@ -279,12 +281,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle{
         case  .delete:
+
+            let coordinateToRemove = Coordinate(lat: weatherAndCityNameCombineList[indexPath.row].weather.lat, lon: weatherAndCityNameCombineList[indexPath.row].weather.lon)
+            
+            if let indexToRemove = allCoordinate.firstIndex(of: coordinateToRemove) {
+                allCoordinate.remove(at: indexToRemove)
+            }
             weatherAndCityNameCombineList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         default:
             break
             
         }
+        viewDidLayoutSubviews()
     }
 }
 // MARK: navigation

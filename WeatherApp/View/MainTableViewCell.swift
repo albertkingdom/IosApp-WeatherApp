@@ -18,6 +18,7 @@ class MainTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         backgroundColor = .mySkyblueColor
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
